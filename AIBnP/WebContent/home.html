@@ -1,0 +1,47 @@
+<html>
+<head>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="./js/main.js"></script>
+
+
+
+</head>
+<body>
+
+	<div id="div1" style="background-color: #019865;height: 480px; width: 480px; margin-top: 100px; margin-left:auto; margin-right: auto;">
+		<div id="div2" style="padding-top: 27px; padding-left: 5px;">
+			<table style="background-color: white; border-color: #5F9EA0; margin-left: auto; margin-right: auto;" border: 1px solid #888; >
+				<tr>
+					<td><button id="myVideoBtn" onclick="openPage('video')"><img alt="" src="./images/camera-icon.png" style="width: 200px; height: 200px"></button></td>
+					<td><button id="mySoundBtn" onclick="openPage('sound')"><img alt="" src="./images/audio-wave.png" style="width: 200px; height: 200px"></button></td>
+				</tr>
+				<tr>
+					<td><button id="myInsuranceBtn" onclick="openPage('insurance')"><img alt="" src="./images/insurance.png" style="width: 200px; height: 200px"></button></td>
+					<td><button id="myCreditBtn" onclick="openPage('credit')"><img alt="" src="./images/credit.png" style="width: 200px; height: 200px"></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+
+
+<script type="text/javascript">
+	function openPage(page){
+		if(page == 'video'){
+			window.open('video.html', 'Video', 'location=no,toolbar=no,menubar=no', '');
+		}else if(page == 'sound'){
+			window.open('sound.html', 'Sound', 'height=400px;width=400px;location=no;toolbar=no;menubar=no', '');
+		}else if(page == 'insurance'){
+			window.open('insurance.html', 'Insurance', 'height=400px;width=400px;location=no;toolbar=no;menubar=no', '');
+		}else if(page == 'credit'){
+			window.open('credit.html', 'Credit', 'height=400px;width=400px;location=no;toolbar=no;menubar=no', '');
+		}else{
+			console.log('Wrong page!!');
+		}
+	}
+</script>
+
+
+
+</body>

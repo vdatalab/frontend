@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Speech To Text</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	 $(function () {
+	        $('form1').bind('submit', function () {
+	          $.ajax({
+	            type: 'post',
+	            url: 'http://192.168.36.45:3000/',
+	            data: $('form').serialize(),
+	            success: function () {
+	              alert('form was submitted');
+	            },
+	            error: function (){
+	            	alert('fail');
+	            }
+	          });
+	          return false;
+	        });
+	      });
+	
+	
+	
+	</script>
+	
+	
+	<iframe name="iframe" id="iframe" width="600px" height="350px"
+		scrolling="no" style=""
+		src="https://www.google.com/intl/en/chrome/demos/speech.html"></iframe>
+
+	<br>
+	<br>
+
+	<form id="form1" name="form1">
+		<input type="text" name="userName" id="userName" placeholder="..."><br>
+		<button type="submit">Gönder</button>
+	</form>
+
+
+	<br><br><br>
+
+
+</body>
+</html>
